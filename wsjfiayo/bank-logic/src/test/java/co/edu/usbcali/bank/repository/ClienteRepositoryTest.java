@@ -39,6 +39,7 @@ class ClienteRepositoryTest {
 	void aTest() {
 		assertNotNull(clienteRepository);
 		assertNotNull(documentoRepository);
+		
 		assertFalse(clienteRepository.findById(clieId).isPresent());
 
 		Cliente cliente = new Cliente();
