@@ -20,7 +20,7 @@ import co.edu.usbcali.bank.domain.Cliente;
 import co.edu.usbcali.bank.domain.TipoDocumento;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("/applicationContext.xml")
-@Rollback(true)
+@Rollback(false)
 class TipoDocumentoRepositoryTest {
 
 
@@ -28,7 +28,7 @@ class TipoDocumentoRepositoryTest {
 	@Autowired
 	TipoDocumentoRepository documentoRepository;
 
-	private final static Long tdocId = 1L;
+	private final static Long tdocId = 4L;
 	private final static Logger log = LoggerFactory.getLogger(TipoDocumentoRepositoryTest.class);
 
 	@Test
@@ -37,7 +37,7 @@ class TipoDocumentoRepositoryTest {
 	void aTest() {
 		
 		assertNotNull(documentoRepository);
-		assertTrue(documentoRepository.findById(tdocId).isPresent(),"el tipo de documento ya existe");
+		assertFalse(documentoRepository.findById(tdocId).isPresent(),"el tipo de documento ya existe");
 
 		
 		TipoDocumento tipoDocumento =new TipoDocumento();
@@ -83,10 +83,10 @@ class TipoDocumentoRepositoryTest {
 	void dTest() {
 
 		
-//		assertNotNull(documentoRepository);
-//		assertTrue(clienteRepository.findById(clieId).isPresent());
-//		Cliente cliente = clienteRepository.findById(clieId).get();
-//		clienteRepository.delete(cliente);
+		assertNotNull(documentoRepository);
+		assertTrue(documentoRepository.findById(tdocId).isPresent());
+	TipoDocumento tipoDocumento = documentoRepository.findById(tdocId).get();
+	documentoRepository.delete(tipoDocumento);
 
 	}
 
@@ -95,22 +95,22 @@ class TipoDocumentoRepositoryTest {
 	@Transactional(readOnly = true)
 	void eTest() {
 
-//		assertNotNull(clienteRepository);
-//		assertNotNull(documentoRepository);
-//
-//		List<Cliente> losClientes = clienteRepository.findAll();
-//
-//		assertNotNull(losClientes);
-//		assertFalse(losClientes.isEmpty());
-//
-//		for (Cliente cliente : losClientes) {
-//			log.info(cliente.getNombre());
-//
-//		}
-//
-//		losClientes.forEach(t -> {
-//			log.info(t.getClieId().toString());
-//		});
+		
+		assertNotNull(documentoRepository);
+
+		List<TipoDocumento> losTipoDoc = documentoRepository.findAll();
+
+		assertNotNull(losTipoDoc);
+		assertFalse(losTipoDoc.isEmpty());
+
+		for (TipoDocumento tipoDocumento : losTipoDoc) {
+			log.info(tipoDocumento.getNombre());
+
+		}
+
+		losTipoDoc.forEach(t -> {
+			log.info(t.getTdocId().toString());
+		});
 	}
 
 }
