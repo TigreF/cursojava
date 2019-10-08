@@ -13,4 +13,26 @@ public class OperacionesMatematicas {
 	public Integer sumar(@PathVariable("n1") Integer numeroUno, @PathVariable("n2") Integer numeroDos) {
 		return numeroUno + numeroDos;
 	}
+
+	class Resultado {
+		
+
+		public Resultado(Integer valor) {
+			super();
+			this.valor = valor;
+		}
+
+		private Integer valor;
+
+		public Integer getValor() {
+			return valor;
+		}
+
+		public void setValor(Integer valor) {
+			this.valor = valor;
+		}
+		
+		
+
+	}
 }
