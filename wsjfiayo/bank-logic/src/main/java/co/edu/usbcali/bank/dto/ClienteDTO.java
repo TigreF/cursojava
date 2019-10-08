@@ -15,7 +15,8 @@ public class ClienteDTO {
 	private String telefono;
 	
 	private long tdocId;
-
+	
+	
 	public Long getClieId() {
 		return clieId;
 	}
