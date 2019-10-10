@@ -75,7 +75,7 @@ public class UsuarioServiceImpl  implements UsuarioService{
 		validar(usuario);
 
 		if (usuarioRepository.findById(usuario.getUsuUsuario()).isPresent() == false) {
-			throw new Exception("el usuario con Id: " + usuario.getUsuUsuario() + " ya existe");
+			throw new Exception("el usuario con Id: " + usuario.getUsuUsuario() + " No existe");
 		}
 		if (tipoUsuariorepository.findById(usuario.getTipoUsuario().getTiusId()).isPresent() == false) {
 			throw new Exception("el tipo de usuario con Id: " + usuario.getTipoUsuario().getTiusId() + " No existe");

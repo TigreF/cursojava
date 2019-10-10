@@ -58,7 +58,7 @@ public class UsuarioController {
 	public ResponseEntity<?> save(@RequestBody UsuarioDTO usuarioDTO) {
 		try {
 			Usuario usuario = usuarioMapper.UsuarioDTOToUsuario(usuarioDTO);
-			usuario = usuarioService.update(usuario);
+			usuario = usuarioService.save(usuario);
 			usuarioDTO = usuarioMapper.UsuarioToUsuarioDTO(usuario);
 			return ResponseEntity.ok().body(usuarioDTO);
 		} catch (Exception e) {
