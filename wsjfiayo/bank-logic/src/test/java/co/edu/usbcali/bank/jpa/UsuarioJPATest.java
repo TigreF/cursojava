@@ -19,6 +19,8 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import co.edu.usbcali.bank.domain.Cliente;
+import co.edu.usbcali.bank.domain.TipoDocumento;
 import co.edu.usbcali.bank.domain.TipoUsuario;
 import co.edu.usbcali.bank.domain.Usuario;
 

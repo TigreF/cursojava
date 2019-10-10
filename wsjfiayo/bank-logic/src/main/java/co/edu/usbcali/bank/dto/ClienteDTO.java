@@ -2,27 +2,20 @@ package co.edu.usbcali.bank.dto;
 
 public class ClienteDTO {
 
-	private Long clieId;
-
+	private Long ClieId;
 	private String activo;
-
 	private String direccion;
-
 	private String email;
-
 	private String nombre;
-
 	private String telefono;
-	
-	private long tdocId;
-	
-	
+	private Long tdocId;
+
 	public Long getClieId() {
-		return clieId;
+		return ClieId;
 	}
 
 	public void setClieId(Long clieId) {
-		this.clieId = clieId;
+		ClieId = clieId;
 	}
 
 	public String getActivo() {
@@ -65,12 +58,11 @@ public class ClienteDTO {
 		this.telefono = telefono;
 	}
 
-	public long getTdocId() {
+	public Long getTdocId() {
 		return tdocId;
 	}
 
-	public void setTdocId(long tdocId) {
+	public void setTdocId(Long tdocId) {
 		this.tdocId = tdocId;
 	}
-
 }

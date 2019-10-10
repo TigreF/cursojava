@@ -11,8 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.usbcali.bank.domain.Cliente;
+import co.edu.usbcali.bank.service.ClienteService;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("/applicationContext.xml")

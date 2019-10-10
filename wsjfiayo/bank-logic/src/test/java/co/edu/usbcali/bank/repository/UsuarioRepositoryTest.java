@@ -19,6 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import co.edu.usbcali.bank.domain.TipoUsuario;
 import co.edu.usbcali.bank.domain.Usuario;
 
 @ExtendWith(SpringExtension.class)

@@ -1,8 +1,6 @@
 package co.edu.usbcali.bank.repository;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
@@ -18,6 +16,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import co.edu.usbcali.bank.domain.Cliente;
 import co.edu.usbcali.bank.domain.TipoDocumento;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration("/applicationContext.xml")
@@ -86,8 +85,8 @@ class TipoDocumentoRepositoryTest {
 		
 		assertNotNull(documentoRepository);
 		assertTrue(documentoRepository.findById(tdocId).isPresent());
-	TipoDocumento tipoDocumento = documentoRepository.findById(tdocId).get();
-	documentoRepository.delete(tipoDocumento);
+		TipoDocumento tipoDocumento = documentoRepository.findById(tdocId).get();
+		documentoRepository.delete(tipoDocumento);
 
 	}
 
@@ -96,22 +95,22 @@ class TipoDocumentoRepositoryTest {
 	@Transactional(readOnly = true)
 	void eTest() {
 
-		
-		assertNotNull(documentoRepository);
-
-		List<TipoDocumento> losTipoDoc = documentoRepository.findAll();
-
-		assertNotNull(losTipoDoc);
-		assertFalse(losTipoDoc.isEmpty());
-
-		for (TipoDocumento tipoDocumento : losTipoDoc) {
-			log.info(tipoDocumento.getNombre());
-
-		}
-
-		losTipoDoc.forEach(t -> {
-			log.info(t.getTdocId().toString());
-		});
+//		assertNotNull(clienteRepository);
+//		assertNotNull(documentoRepository);
+//
+//		List<Cliente> losClientes = clienteRepository.findAll();
+//
+//		assertNotNull(losClientes);
+//		assertFalse(losClientes.isEmpty());
+//
+//		for (Cliente cliente : losClientes) {
+//			log.info(cliente.getNombre());
+//
+//		}
+//
+//		losClientes.forEach(t -> {
+//			log.info(t.getClieId().toString());
+//		});
 	}
 
 }

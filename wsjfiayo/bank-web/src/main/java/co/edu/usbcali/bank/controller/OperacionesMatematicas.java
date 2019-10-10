@@ -9,32 +9,41 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/operaciones")
 public class OperacionesMatematicas {
 
-	@GetMapping("/suma/{n1}/{n2}")
-	public Resultado sumar(@PathVariable("n1") Integer numeroUno, @PathVariable("n2") Integer numeroDos) {
-		return new Resultado(numeroUno + numeroDos);
+	@GetMapping("/sumar/{n1}/{n2}")
+	public Resultado sumar(@PathVariable("n1") Integer numUno, @PathVariable("n2") Integer numDos) {
+		return new Resultado(numUno+numDos);
 	}
 	
-	@GetMapping("/resta/{n1}/{n2}")
-	public Resultado resta(@PathVariable("n1") Integer numeroUno, @PathVariable("n2") Integer numeroDos) {
-		return new Resultado(numeroUno - numeroDos);
+	@GetMapping("/restar/{n1}/{n2}")
+	public Resultado restar(@PathVariable("n1") Integer numUno, @PathVariable("n2") Integer numDos) {
+		return new Resultado(numUno-numDos);
+	}
+	
+	@GetMapping("/dividir/{n1}/{n2}")
+	public Resultado dividir(@PathVariable("n1") Integer numUno, @PathVariable("n2") Integer numDos) {
+		return new Resultado(numUno/numDos);
+	}
+	
+	@GetMapping("/multiplicar/{n1}/{n2}")
+	public Resultado multiplicar(@PathVariable("n1") Integer numUno, @PathVariable("n2") Integer numDos) {
+		return new Resultado(numUno*numDos);
+	}
+}
+
+class Resultado {
+	private Integer valor;
+
+	public Resultado(Integer valor) {
+		super();
+		this.valor = valor;
 	}
 
-	class Resultado {
-
-		public Resultado(Integer valor) {
-			super();
-			this.valor = valor;
-		}
-
-		private Integer valor;
-
-		public Integer getValor() {
-			return valor;
-		}
-
-		public void setValor(Integer valor) {
-			this.valor = valor;
-		}
-
+	public Integer getValor() {
+		return valor;
 	}
+
+	public void setValor(Integer valor) {
+		this.valor = valor;
+	}
+
 }

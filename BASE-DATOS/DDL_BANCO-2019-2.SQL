@@ -1,7 +1,6 @@
 -- Create tables section -------------------------------------------------
 
 -- Table CLIENTE
-
 CREATE TABLE CLIENTE(
  CLIE_ID Numeric(30,0) NOT NULL,
  NOMBRE Varchar NOT NULL,
