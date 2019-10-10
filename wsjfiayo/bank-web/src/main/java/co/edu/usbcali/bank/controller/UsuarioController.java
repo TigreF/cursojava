@@ -19,6 +19,7 @@ import co.edu.usbcali.bank.domain.Usuario;
 
 import co.edu.usbcali.bank.dto.UsuarioDTO;
 import co.edu.usbcali.bank.mapper.UsuarioMapper;
+import co.edu.usbcali.bank.response.ResponseError;
 import co.edu.usbcali.bank.service.UsuarioService;
 
 @RestController

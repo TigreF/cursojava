@@ -1,4 +1,4 @@
-package co.edu.usbcali.bank.controller;
+package co.edu.usbcali.bank.response;
 
 public class ResponseError {
 
