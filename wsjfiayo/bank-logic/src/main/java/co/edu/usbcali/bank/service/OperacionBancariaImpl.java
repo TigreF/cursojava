@@ -162,8 +162,8 @@ public class OperacionBancariaImpl implements IOperacionBancaria {
 		transaccion.setValor(valor);
 		
 		
-		
-		return 0L;
+		transaccion=transaccionRepository.save(transaccion);
+		return transaccion.getTranId();
 		
 
 	}
