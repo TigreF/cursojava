@@ -24,6 +24,7 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         UsuarioDTO usuarioDTO = new UsuarioDTO();
 
         usuarioDTO.setTiusId( usuarioTipoUsuarioTiusId( usuario ) );
+        usuarioDTO.setUsuUsuario( usuario.getUsuUsuario() );
         usuarioDTO.setActivo( usuario.getActivo() );
         usuarioDTO.setClave( usuario.getClave() );
         usuarioDTO.setFechaCreacion( usuario.getFechaCreacion() );
@@ -32,7 +33,6 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         usuarioDTO.setNombre( usuario.getNombre() );
         usuarioDTO.setUsuCreador( usuario.getUsuCreador() );
         usuarioDTO.setUsuModificador( usuario.getUsuModificador() );
-        usuarioDTO.setUsuUsuario( usuario.getUsuUsuario() );
 
         return usuarioDTO;
     }
@@ -46,6 +46,7 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         Usuario usuario1 = new Usuario();
 
         usuario1.setTipoUsuario( usuarioDTOToTipoUsuario( usuario ) );
+        usuario1.setUsuUsuario( usuario.getUsuUsuario() );
         usuario1.setActivo( usuario.getActivo() );
         usuario1.setClave( usuario.getClave() );
         usuario1.setFechaCreacion( usuario.getFechaCreacion() );
@@ -54,7 +55,6 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         usuario1.setNombre( usuario.getNombre() );
         usuario1.setUsuCreador( usuario.getUsuCreador() );
         usuario1.setUsuModificador( usuario.getUsuModificador() );
-        usuario1.setUsuUsuario( usuario.getUsuUsuario() );
 
         return usuario1;
     }
