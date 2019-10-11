@@ -64,7 +64,7 @@ class OperacionBancariaTest {
 		
 		@Test
 		@DisplayName("transferir")
-		void transferir()  {
+		void transferir()  { 
 			try {
 				assertNotNull(operacionBancaria,"Operacion bancaria es nulo");
 			String cuentaIdOrigen ="4640-0341-9387-5781";
