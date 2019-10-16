@@ -3012,9 +3012,9 @@ insert into CLIENTE (CLIE_ID, NOMBRE, DIRECCION, TELEFONO, EMAIL, ACTIVO, TDOC_I
   insert into CUENTA (CUEN_ID, SALDO, CLAVE, ACTIVA, CLIE_ID) values ('8710-3663-6240-3632', 2848454, '3L4N0p', 'S', 27);
   insert into CUENTA (CUEN_ID, SALDO, CLAVE, ACTIVA, CLIE_ID) values ('2241-4361-4909-0695', 2914565, 'iDDakgzSf', 'S', 838);
   insert into CUENTA (CUEN_ID, SALDO, CLAVE, ACTIVA, CLIE_ID) values ('4707-4351-5513-7836', 4992098, 'ZYeS03LdlZZb', 'S', 79);
-  insert into CUENTA (CUEN_ID, SALDO, CLAVE, ACTIVA, CLIE_ID) values ('5609-7989-4644-3688', 3066843, 'NoyhknF2', 'S', 377);
+  insert into CUENTA (CUEN_ID, SALDO, CLAVE, ACTIVA, CLIE_ID) values ('9999-9999-9999-9999', 0, 'NoyhknF2', 'S', 1);
 
-INSERT INTO cuenta_registrada(clie_id, cuen_id, activa) VALUES (1,'4640-0341-9387-5781','S');
+INSERT INTO cuenta_registrada(clie_id, cuen_id, activa) VALUES (1,'9999-9999-9999-9999','S');
 INSERT INTO cuenta_registrada(clie_id, cuen_id, activa) VALUES (1,'1630-2511-2937-7299','S');
 INSERT INTO cuenta_registrada(clie_id, cuen_id, activa) VALUES (1,'6592-7866-3024-5314','S');
 INSERT INTO cuenta_registrada(clie_id, cuen_id, activa) VALUES (1,'1475-4858-1691-5789','S');
