@@ -1,0 +1,4 @@
+<h3>{{titulo}}</h3>
+<li *ngFor="let cliente of listaCliente" (click)="editar(cliente)">
+    <b>Id Cliente: </b> {{cliente.id}}<b>  Nombre: </b>{{cliente.nombre}}<b>  Correo: </b>{{cliente.email}}
+</li> 
