@@ -40,5 +40,14 @@ export class ClienteSaveComponent implements OnInit {
   public findAllActivo() {
     this.listaActivo = this.activoService.finfAll();
   }
+  public save(){
+    this.clienteService.save(this.cliente).subscribe(t=>{
+      this.showMsg=true;
+      this.msg='El cliente se grabo con exito';
+    },error=>{
+      this.showMsg=true;
+      this.msg=error.error.message;
+    });
+  }
 
 }
