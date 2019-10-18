@@ -23,7 +23,7 @@ public class TipoDocumentoController {
 	TipoDocumentoRepository tipoDocumentoRepository;
 	
 	@GetMapping("findAll")
-	public List<TipoDocumentoDTO> findAll(){
+	public List<TipoDocumentoDTO> findAll(){ 
 		
 		List<TipoDocumento> listTipoDocumentos=tipoDocumentoRepository.findAll();
 		return tipoDocumentoMapper.toTipoDocumentoDTO(listTipoDocumentos);
