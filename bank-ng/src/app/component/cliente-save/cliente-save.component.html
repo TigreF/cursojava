@@ -1,0 +1,24 @@
+<div *ngIf="showMsg">
+    {{msg}}
+</div>
+
+<form #clienteform=ngForm>
+
+
+
+    <input [(ngModel)]="cliente.clieId" type="clieId" name="clieId" id="clieId" placeholder="ID"><br>
+    <input [(ngModel)]="cliente.nombre" type="nombre" name="nombre" id="nombre" placeholder="Nombre"><br>
+    <input [(ngModel)]="cliente.email" type="email" name="email" id="email" placeholder="Correo"><br>
+    <input [(ngModel)]="cliente.direccion" type="direccion" name="direccion" id="direccion" placeholder="Dirección"><br>
+    <input [(ngModel)]="cliente.telefono" type="telefono" name="telefono" id="telefono" placeholder="Telefono"><br>
+    <input [(ngModel)]="cliente.usuCreador" type="usuCreador" name="usuCreador" id="usuCreador" placeholder="Usuario Creador"><br>
+    <input [(ngModel)]="cliente.usuModificador" type="usuModificador" name="usuModificador" id="usuModificador" placeholder="Usuario Modificador"><br>
+
+    <input [(ngModel)]="cliente.tdocId" type="tdocId" name="tdocId" id="tdocId" placeholder="Tipo Documento"><br>
+    <input [(ngModel)]="cliente.activo" type="activo" name="activo" id="activo" placeholder="Estado"><br>
+
+
+
+
+
+</form>
